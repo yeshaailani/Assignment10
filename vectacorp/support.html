@@ -7,16 +7,18 @@
 	<link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="css/skeleton.css">
 	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
 
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 
-	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://malsup.github.io/min/jquery.cycle2.min.js"></script>
 	<script src="js/jquery.mobilemenu.js"></script>
+
 	<script>
 		$(document).ready(function(){
 			$('#responsive-menu').mobileMenu();
+			$( document ).tooltip();
 		});
 	</script>
 </head>
@@ -28,11 +30,11 @@
 		
 		<nav class="thirteen columns">
 			<ul id="responsive-menu">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="aboutus.html">About Us</a></li>
-				<li><a href="solutions.html">Solutions</a></li>
-				<li><a href="support.html">Support</a></li>
-				<li><a href="contactus.html">Contact Us</a></li>
+				<li><a href="index.html" title="Home">Home</a></li>
+				<li><a href="aboutus.html" title="About Us">About Us</a></li>
+				<li><a href="solutions.html" title="Solutions">Solutions</a></li>
+				<li><a href="support.html" title="Support">Support</a></li>
+				<li><a href="contactus.html" title="Contact Us">Contact Us</a></li>
 			</ul>
 		</nav>
 		
@@ -42,7 +44,7 @@
 		
 		<section id="welcome" class="sixteen columns">
 			<h4>Support</h4>
-			<p>Find the latest technical resources including articles, tips, patches, documentation and more and discuss ideas with your peers. These communities are your convenient one-stop shop for vSupport. Still have a question? <a href="mailto:support@vectacorp.com?Subject=I%20need%20help...">Send us an email</a>.</p>
+			<p>Find the latest technical resources including articles, tips, patches, documentation and more and discuss ideas with your peers. These communities are your convenient one-stop shop for vSupport. Still have a question? <a href="mailto:support@vectacorp.com?Subject=I%20need%20help...">Send us an email</a>.</p>
 		</section>
 	</main>
 </body>

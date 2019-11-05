@@ -7,16 +7,22 @@
 	<link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="css/skeleton.css">
 	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-
-	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://malsup.github.io/min/jquery.cycle2.min.js"></script>
 	<script src="js/jquery.mobilemenu.js"></script>
+
 	<script>
 		$(document).ready(function(){
 			$('#responsive-menu').mobileMenu();
+			$( document ).tooltip();
+			$( "input[type=submit]").button();
+			$( "#companysize" ).selectmenu();
+			$( ".input-checkboxradio" ).checkboxradio();
+			
 		});
 	</script>
 </head>
@@ -28,11 +34,11 @@
 		
 		<nav class="thirteen columns">
 			<ul id="responsive-menu">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="aboutus.html">About Us</a></li>
-				<li><a href="solutions.html">Solutions</a></li>
-				<li><a href="support.html">Support</a></li>
-				<li><a href="contactus.html">Contact Us</a></li>
+				<li><a href="index.html" title="Home">Home</a></li>
+				<li><a href="aboutus.html" title="About Us">About Us</a></li>
+				<li><a href="solutions.html" title="Solutions">Solutions</a></li>
+				<li><a href="support.html" title="Support">Support</a></li>
+				<li><a href="contactus.html" title="Contact Us">Contact Us</a></li>
 			</ul>
 		</nav>
 		
@@ -56,26 +62,28 @@
 				<input type="email" name="email" maxlength="30" required="">
 			   
                 What VectaCorp products are you interested in?<br>
-			    <label for="vProspect"><input type="checkbox" name="product" value="vProspect" id="vProspect">vProspect 2.0</label>
-			    <label for="vConvert"><input type="checkbox" name="product" value="vConvert" id="vConvert">vConvert 2.0</label>
-			    <label for="vRetain"><input type="checkbox" name="product" value="vRetain" id="vRetain">vRetain 1.0</label>
-			    
+			    <label for="vProspect"><input class="input-checkboxradio" type="checkbox" name="product" value="vProspect" id="vProspect">vProspect 2.0</label>
+			    <label for="vConvert"><input class="input-checkboxradio" type="checkbox" name="product" value="vConvert" id="vConvert">vConvert 2.0</label>
+			    <label for="vRetain"><input class="input-checkboxradio" type="checkbox" name="product" value="vRetain" id="vRetain">vRetain 1.0</label>
+				
+				<br>
 			    <br>
 			    What is your current infrastructure?<br>
-			    <label for="Mac"><input type="radio" name="infrastructure" value="Mac" id="Mac">Mac</label>
-			    <label for="Linux"><input type="radio" name="infrastructure" value="Linux" id="Linux">Linux</label>
-			    <label for="Unix"><input type="radio" name="infrastructure" value="Unix" id="Unix">Unix</label>
-			    <label for="Windows"><input type="radio" name="infrastructure" value="Windows" id="Windows">Windows</label>
-
+			    <label for="Mac"><input class="input-checkboxradio" type="radio" name="infrastructure" value="Mac" id="Mac">Mac</label>
+			    <label for="Linux"><input class="input-checkboxradio" type="radio" name="infrastructure" value="Linux" id="Linux">Linux</label>
+			    <label for="Unix"><input class="input-checkboxradio" type="radio" name="infrastructure" value="Unix" id="Unix">Unix</label>
+			    <label for="Windows"><input class="input-checkboxradio" type="radio" name="infrastructure" value="Windows" id="Windows">Windows</label>
+				<br>
 			    <br>
 			    How many employees do you have?
-			    <select name="companysize">
+			    <select name="companysize" id="companysize">
                     <option value="1-10">1-10</option>
                     <option value="11-100">11-100</option>
                     <option value="101-1000">101-1000</option>
                     <option value="More than 1000">More than 1000</option>
 		        </select>
-                
+				
+				<br>
 			    How did you hear about us?
 			    <select name="hearaboutus" multiple="" size="5">
                     <option value="Magazine Ad">Magazine Ad</option>
@@ -87,7 +95,7 @@
                 
 			    Questions or comments for our sales representatives?
 			    <textarea name="questions" size="30" rows="5"></textarea>
-			    <input type="submit" name="submit" value="Submit Now">
+			    <input class="ui-button ui-widget ui-corner-all" type="submit" name="submit" value="Submit Now">
 		    	</fieldset>
 			</form>
 	    </section>
